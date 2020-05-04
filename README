@@ -1,0 +1,4 @@
+Install Java 1.8 on your Rasberry PI
+Configure your serial port to use hardware UART on /dev/serial0
+run java -jar modbus-1.0-SNAPSHOT.jar
+a JSON output file output.json will be created.
