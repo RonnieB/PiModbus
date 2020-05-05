@@ -145,16 +145,7 @@ public class ModbusClient {
         byte lowByteI2 = (byte)(i2 & 0xFF);
         byte penultimateByteI2 = (byte)((i2 >> 8) & 0xFF);
         // System.out.println("Lb1:" + lowByteI1 + " hb1:" + penultimateByteI1 + " lb2:" + lowByteI2 + " hb2:" + penultimateByteI2);
-        ArrayList<Byte> arrayList = new ArrayList<Byte>();
-        arrayList.add(penultimateByteI1);
-        arrayList.add(lowByteI1);
-        arrayList.add(penultimateByteI2);
-        arrayList.add(lowByteI2);
         byte[] bytes = {penultimateByteI1,lowByteI1,penultimateByteI2,lowByteI2};
-        bytes[0] = arrayList.get(0);
-        bytes[1] = arrayList.get(1);
-        bytes[2] = arrayList.get(2);
-        bytes[3] = arrayList.get(3);
         float fb = ByteBuffer.wrap(bytes).order(ByteOrder.BIG_ENDIAN).getFloat();
         //System.out.println("Int1:" + i1 + " Int2:" + i2 + " Float Big:" + fb);
         return fb;
