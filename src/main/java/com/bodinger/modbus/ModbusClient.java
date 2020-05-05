@@ -36,7 +36,6 @@ public class ModbusClient {
     private void run(){
         try {
             init();
-            getRegister(0);
             MeterOutput meterOutput = getMeterOutput();
             System.out.println(meterOutput);
             BufferedWriter writer = new BufferedWriter(new FileWriter("out.json"));
@@ -47,11 +46,7 @@ public class ModbusClient {
             e.printStackTrace();
         } catch (ModbusIOException e) {
             e.printStackTrace();
-        } catch (ModbusNumberException e) {
-            e.printStackTrace();
-        } catch (ModbusProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        }  catch (IOException e) {
             e.printStackTrace();
         }
     }
