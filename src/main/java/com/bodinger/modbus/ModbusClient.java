@@ -94,17 +94,6 @@ public class ModbusClient {
             e.printStackTrace();
         }
 
-
-
-    float Phase_1_current = 0;
-    float Phase_2_current = 0;
-    float Phase_3_current = 0;
-    float Average_line_toneutral_volts = 0;
-    float Average_line_current = 0;
-    float Sum_of_line_currents = 0;
-    float Total_system_power = 0;
-    float Import_wh_since_last_reset = 0;
-    float Export_wh_since_last_reset = 0;
         return m;
     }
 
